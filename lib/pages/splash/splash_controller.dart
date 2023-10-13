@@ -1,5 +1,6 @@
+import 'package:abc_monitor/pages/presentation/presentation_page.dart';
+
 import '../../navigation.dart';
-import '../login/login_page.dart';
 
 class SplashController {
   SplashController() {
@@ -8,7 +9,7 @@ class SplashController {
 
   void checkAuthStatus() {
     Future.delayed(const Duration(seconds: 2)).then((_) {
-      CustomNavigation.push(const LoginPage());
+      CustomNavigation.push(const PresentationPage());
     });
   }
 }

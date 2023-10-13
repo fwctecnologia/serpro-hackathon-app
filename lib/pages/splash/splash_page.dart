@@ -17,7 +17,7 @@ class _SplashPageState extends State<SplashPage> {
     return Scaffold(
       body: Center(
         child: Image.asset(
-          Constants.logotipoAssetUrl,
+          Constants.logotipoAsset,
           scale: 2,
         ),
       ),

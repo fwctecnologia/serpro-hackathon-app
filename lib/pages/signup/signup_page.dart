@@ -192,9 +192,9 @@ Widget genderButton({
   required VoidCallback onPressed,
   bool selected = false,
 }) {
-  final foregroundColor = selected ? AppTheme.kBlueDefault : AppTheme.kBlack;
+  final foregroundColor = selected ? AppTheme.kDefaultColor : AppTheme.kBlack;
   final borderColor =
-      selected ? AppTheme.kBlueDefault : Colors.black.withOpacity(0.2);
+      selected ? AppTheme.kDefaultColor : Colors.black.withOpacity(0.2);
   return SizedBox(
     width: 50,
     child: ElevatedButton(

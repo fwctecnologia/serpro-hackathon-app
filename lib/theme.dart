@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class AppTheme {
-  static const Color kBlueDefault = Color(0xFF0d2237);
-  static const Color kBlueRoyal = Color(0xff050f18);
+  static const Color kDefaultColor = Color(0xFF509F7E);
+  static const Color kScaffoldColor = Color(0xFFE8F3EE);
+  static const Color kLightGreen = Color(0xff63726B);
+  static const Color kDarkGreen = Color(0xFF20342B);
   static Color kBlack = const Color(0xFF000000).withOpacity(0.8);
 
   static ThemeData light({Color? color}) => ThemeData(
@@ -18,7 +20,7 @@ class AppTheme {
           ),
         ),
         disabledColor: Colors.black,
-        scaffoldBackgroundColor: Colors.white,
+        scaffoldBackgroundColor: const Color(0xFFE8F3EE),
         visualDensity: VisualDensity.adaptivePlatformDensity,
         dialogBackgroundColor: Colors.white,
         hintColor: Colors.black.withOpacity(0.16),
@@ -35,6 +37,10 @@ class AppTheme {
             borderRadius: BorderRadius.circular(6),
           ),
         ),
+        colorScheme: const ColorScheme.light(
+          primary: kDefaultColor,
+          secondary: kLightGreen,
+        ),
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ButtonStyle(
             elevation: MaterialStateProperty.all(0.5),
@@ -42,11 +48,11 @@ class AppTheme {
             textStyle: MaterialStateProperty.all(
               GoogleFonts.roboto(
                 fontSize: 14,
-                fontWeight: FontWeight.w500,
+                fontWeight: FontWeight.w700,
                 color: Colors.white,
               ),
             ),
-            backgroundColor: MaterialStateProperty.all(kBlueDefault),
+            backgroundColor: MaterialStateProperty.all(kDefaultColor),
             shape: MaterialStateProperty.all(
               const RoundedRectangleBorder(
                 borderRadius: BorderRadius.all(Radius.circular(12)),
@@ -55,28 +61,29 @@ class AppTheme {
           ),
         ),
         textTheme: TextTheme(
-          bodyLarge: GoogleFonts.lato(fontSize: 16, color: kBlack),
-          bodyMedium: GoogleFonts.lato(fontSize: 12, color: kBlack),
-          bodySmall: GoogleFonts.lato(fontSize: 10, color: kBlack),
+          bodyLarge: GoogleFonts.robotoCondensed(
+              fontSize: 16, color: kBlack, fontWeight: FontWeight.w500),
+          bodyMedium: GoogleFonts.robotoCondensed(fontSize: 12, color: kBlack),
+          bodySmall: GoogleFonts.robotoCondensed(fontSize: 10, color: kBlack),
           displayLarge: GoogleFonts.sortsMillGoudy(fontSize: 26, color: kBlack),
           displayMedium:
               GoogleFonts.sortsMillGoudy(fontSize: 20, color: kBlack),
-          displaySmall: GoogleFonts.lato(
+          displaySmall: GoogleFonts.robotoCondensed(
             fontSize: 16,
             color: kBlack,
             fontWeight: FontWeight.w600,
           ),
-          headlineLarge: GoogleFonts.lato(
+          headlineLarge: GoogleFonts.robotoCondensed(
             fontSize: 26,
-            color: kBlack,
+            color: kDarkGreen,
             fontWeight: FontWeight.bold,
           ),
-          headlineMedium: GoogleFonts.lato(
+          headlineMedium: GoogleFonts.robotoCondensed(
             fontSize: 16,
             color: kBlack,
             fontWeight: FontWeight.bold,
           ),
-          headlineSmall: GoogleFonts.lato(
+          headlineSmall: GoogleFonts.robotoCondensed(
             fontSize: 12,
             color: kBlack,
             fontWeight: FontWeight.bold,

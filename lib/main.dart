@@ -1,14 +1,15 @@
+import 'package:abc_monitor/pages/splash/splash_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import 'navigation.dart';
 import 'theme.dart';
-import 'views/splash/splash_page.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
-    statusBarColor: Colors.white,
-    statusBarBrightness: Brightness.dark,
+    statusBarColor: AppTheme.kScaffoldColor,
+    statusBarBrightness: Brightness.light,
+    statusBarIconBrightness: Brightness.dark,
   ));
   runApp(const MyApp());
 }
