@@ -1,16 +1,16 @@
-import 'package:abc_monitor/pages/presentation/presentation_controller.dart';
 import 'package:flutter/material.dart';
 
 import '../../constants.dart';
+import 'apresentacao_controller.dart';
 
-class PresentationPage extends StatefulWidget {
-  const PresentationPage({Key? key}) : super(key: key);
+class ApresentacaoPage extends StatefulWidget {
+  const ApresentacaoPage({Key? key}) : super(key: key);
 
   @override
-  State<PresentationPage> createState() => _PresentationPageState();
+  State<ApresentacaoPage> createState() => _ApresentacaoPageState();
 }
 
-class _PresentationPageState extends State<PresentationPage> {
+class _ApresentacaoPageState extends State<ApresentacaoPage> {
   final controller = PresentationController();
   @override
   Widget build(BuildContext context) {

@@ -12,7 +12,7 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
-  final lController = UserController();
+  final lController = LoginController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,7 +42,7 @@ class _LoginPageState extends State<LoginPage> {
                         width: 2,
                       ),
                     ),
-                    onPressed: () => lController.goToSignupPage(),
+                    onPressed: () => lController.goToApresentacaoPage(),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [

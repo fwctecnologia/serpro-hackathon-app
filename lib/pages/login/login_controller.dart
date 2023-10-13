@@ -1,19 +1,15 @@
+import 'package:abc_monitor/pages/apresentacao/apresentacao_page.dart';
+
 import '../../model/user.dart';
 import '../../navigation.dart';
-import '../recovery/recovery_page.dart';
-import '../signup/signup_page.dart';
 
-class UserController {
+class LoginController {
   late User user;
-  UserController() {
+  LoginController() {
     user = User.empty();
   }
 
-  void goToSignupPage() {
-    CustomNavigation.push(const SignupPage());
-  }
-
-  void goToRecoveryPage() {
-    CustomNavigation.push(const RecoveryPage());
+  void goToApresentacaoPage() {
+    CustomNavigation.push(const ApresentacaoPage());
   }
 }
