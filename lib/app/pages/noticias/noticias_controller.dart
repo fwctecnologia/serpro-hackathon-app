@@ -1,5 +1,7 @@
+import '../../../constants.dart';
+
 class NoticiasController {
-  List<dynamic> data = [
+  List<dynamic> dataHome = [
     [
       "https://tpc.googlesyndication.com/simgad/5411870909752894687",
       "O Reflexo do Mercado Internacional no Agronegócio Brasileiro | Agro Jovem Podcast",
@@ -22,8 +24,19 @@ class NoticiasController {
     ],
   ];
 
+  List<dynamic> data = [
+    Constants.n1Asset,
+    Constants.n2Asset,
+    Constants.n3Asset,
+  ];
+
   Future<dynamic> getNoticias() async {
     await Future.delayed(const Duration(seconds: 1));
     return data;
+  }
+
+  Future<dynamic> getNoticiasHome() async {
+    await Future.delayed(const Duration(seconds: 1));
+    return dataHome;
   }
 }

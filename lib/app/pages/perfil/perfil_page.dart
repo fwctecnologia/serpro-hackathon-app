@@ -180,13 +180,14 @@ class _PerfilPageState extends State<PerfilPage> {
                       child: Text(
                         "28% Concluído",
                         style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                              fontSize: 16,
+                              fontSize: 14,
                               fontWeight: FontWeight.bold,
                             ),
                       ),
                     ),
                     Container(
-                      padding: const EdgeInsets.only(right: 120),
+                      padding: EdgeInsets.only(
+                          right: MediaQuery.of(context).size.width * 0.72),
                       decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(10),

@@ -1,3 +1,4 @@
+import 'package:abc_monitor/app/pages/noticias/leitura_noticia_page.dart';
 import 'package:abc_monitor/theme.dart';
 import 'package:abc_monitor/widgets/bottom_bar.dart';
 import 'package:flutter/material.dart';
@@ -23,7 +24,7 @@ class _HomePageState extends State<HomePage> {
   @override
   void initState() {
     super.initState();
-    noticiasController.getNoticias().then((value) {
+    noticiasController.getNoticiasHome().then((value) {
       data = value;
       setState(() {});
     });
@@ -206,7 +207,12 @@ class _HomePageState extends State<HomePage> {
                     builder: (BuildContext context) {
                       return GestureDetector(
                         onTap: () {
-                          //  CustomNavigation.push(context, DetailsScreen(data: i));
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                      const LeituraNoticiaPage(
+                                          image: Constants.n1Asset)));
                         },
                         child: Container(
                           width: MediaQuery.of(context).size.width,

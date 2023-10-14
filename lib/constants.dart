@@ -18,6 +18,9 @@ class Constants {
   static const String p2Asset = 'assets/p2.png';
   static const String p3Asset = 'assets/p3.png';
   static const String p4Asset = 'assets/p4.png';
+  static const String n1Asset = 'assets/n1.png';
+  static const String n2Asset = 'assets/n2.png';
+  static const String n3Asset = 'assets/n3.png';
 
   static List<Color> coresIndicadoras = [
     AppTheme.kDefaultColor,
