@@ -1,3 +1,4 @@
+import 'package:abc_monitor/model/propriedade.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -13,6 +14,7 @@ class CadastrarPropriedadePage extends StatefulWidget {
 
 class _CadastrarPropriedadePageState extends State<CadastrarPropriedadePage> {
   final pageController = PageController();
+  final nomeTec = TextEditingController();
 
   @override
   void initState() {
@@ -43,7 +45,7 @@ class _CadastrarPropriedadePageState extends State<CadastrarPropriedadePage> {
 
     Widget _buildStepIndicator(int index, int currentPage) {
       return Container(
-        width: MediaQuery.of(context).size.width * 0.14,
+        width: MediaQuery.of(context).size.width * 0.20,
         height: 4.5,
         decoration: BoxDecoration(
           color: currentPage >= index
@@ -70,25 +72,25 @@ class _CadastrarPropriedadePageState extends State<CadastrarPropriedadePage> {
                 _buildStepIndicator(1, currentPage ?? 0),
                 _buildStepIndicator(2, currentPage ?? 0),
                 _buildStepIndicator(3, currentPage ?? 0),
-                _buildStepIndicator(4, currentPage ?? 0),
-                _buildStepIndicator(5, currentPage ?? 0),
+                // _buildStepIndicator(4, currentPage ?? 0),
+                // _buildStepIndicator(5, currentPage ?? 0),
               ],
             ),
             const SizedBox(height: 30),
             Expanded(
               child: PageView(
                 controller: pageController,
-                children: const [
-                  StepOne(),
+                children: [
+                  StepOne(tec: nomeTec),
                   StepTwo(),
                   StepThree(),
                   StepFour(),
-                  StepFive(),
-                  StepSix(),
+                  // StepFive(),
+                  // StepSix(),
                 ],
               ),
             ),
-            if (currentPage != 5) ...[
+            if (currentPage != 3) ...[
               InkWell(
                 onTap: onNext,
                 child: Container(
@@ -129,7 +131,7 @@ class _CadastrarPropriedadePageState extends State<CadastrarPropriedadePage> {
               //   ),
               // ),
             ],
-            if (currentPage == 5) ...[
+            if (currentPage == 3) ...[
               InkWell(
                 onTap: () {
                   // Navigator.of(context).pushReplacement(
@@ -137,6 +139,18 @@ class _CadastrarPropriedadePageState extends State<CadastrarPropriedadePage> {
                   //     builder: (context) => const NovaGraninhaScreen(),
                   //   ),
                   // );
+
+                  final propriedade = Propriedade(
+                    nome: nomeTec.text,
+                    cidade: "Barreirinha",
+                    estado: "AM",
+                    atividades: ["Café"],
+                    praticasAbc: 3,
+                    hectares: 40,
+                    porcentagemAreaVerde: 30,
+                  );
+
+                  Navigator.of(context).pop(propriedade);
                 },
                 child: Container(
                     height: 65,
@@ -150,7 +164,7 @@ class _CadastrarPropriedadePageState extends State<CadastrarPropriedadePage> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
-                            "Receber Prêmio",
+                            "Finalizar",
                             style: GoogleFonts.robotoCondensed(
                               fontSize: 24,
                               fontWeight: FontWeight.w600,
@@ -172,7 +186,11 @@ class _CadastrarPropriedadePageState extends State<CadastrarPropriedadePage> {
 }
 
 class StepOne extends StatelessWidget {
-  const StepOne({super.key});
+  final TextEditingController tec;
+  const StepOne({
+    super.key,
+    required this.tec,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -191,6 +209,7 @@ class StepOne extends StatelessWidget {
           ),
           SizedBox(height: 10),
           TextFormField(
+            controller: tec,
             autofocus: true,
             style: GoogleFonts.robotoCondensed(
               fontSize: 26,
@@ -424,8 +443,11 @@ class StepFour extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            const SizedBox(height: 20),
+            Image.asset("assets/ia.png"),
+            const SizedBox(height: 20),
             Text(
-              "Quais desses você já usa?",
+              "Aguarde enquanto nossa Inteligência Artificial processa os dados da sua propriedade",
               style: GoogleFonts.robotoCondensed(
                 fontSize: 24,
                 fontWeight: FontWeight.w600,
@@ -433,23 +455,23 @@ class StepFour extends StatelessWidget {
               ),
               textAlign: TextAlign.center,
             ),
-            const SizedBox(height: 10),
-            Text(
-              "Se ainda não usa nenhum, pode passar",
-              style: GoogleFonts.robotoCondensed(
-                fontSize: 20,
-                fontWeight: FontWeight.w600,
-                height: 23 / 20,
-              ),
-              textAlign: TextAlign.left,
-            ),
-            const SizedBox(height: 20),
-            const CheckBoxOption(title: "Cartão de crédito"),
-            const CheckBoxOption(title: "Conta corrente"),
-            const CheckBoxOption(title: "Pix"),
-            const CheckBoxOption(title: "Pagamento por aproximação"),
-            const CheckBoxOption(title: "Google Wallet ou Apple Pay"),
-            const CheckBoxOption(title: "Linhas de crédito"),
+            // const SizedBox(height: 10),
+            // Text(
+            //   "Se ainda não usa nenhum, pode passar",
+            //   style: GoogleFonts.robotoCondensed(
+            //     fontSize: 20,
+            //     fontWeight: FontWeight.w600,
+            //     height: 23 / 20,
+            //   ),
+            //   textAlign: TextAlign.left,
+            // ),
+            // const SizedBox(height: 20),
+            // const CheckBoxOption(title: "Cartão de crédito"),
+            // const CheckBoxOption(title: "Conta corrente"),
+            // const CheckBoxOption(title: "Pix"),
+            // const CheckBoxOption(title: "Pagamento por aproximação"),
+            // const CheckBoxOption(title: "Google Wallet ou Apple Pay"),
+            // const CheckBoxOption(title: "Linhas de crédito"),
           ],
         ),
       ),

@@ -1,3 +1,4 @@
+import 'package:abc_monitor/app/pages/cadastrar_propriedade/cadastrar_propriedade_screen.dart';
 import 'package:abc_monitor/theme.dart';
 import 'package:abc_monitor/widgets/card_propriedade_widget.dart';
 import 'package:flutter/material.dart';
@@ -61,7 +62,16 @@ class _PropriedadePageState extends State<PropriedadePage> {
           style: ElevatedButton.styleFrom(
             backgroundColor: AppTheme.kDefaultColor,
           ),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+              return CadastrarPropriedadePage();
+            })).then((value) {
+              if (value is Propriedade) {
+                propriedades.add(value);
+                setState(() {});
+              }
+            });
+          },
           child: const Text('Cadastrar Propriedade'),
         ),
       ),
@@ -85,6 +95,9 @@ class _PropriedadePageState extends State<PropriedadePage> {
                             ),
                           )
                           .toList(),
+                      SizedBox(
+                        height: 100,
+                      )
                     ],
                   ),
           ],

@@ -6,7 +6,7 @@ import '../cadastrar_propriedade/cadastrar_propriedade_screen.dart';
 import '../documentos/documentos_page.dart';
 
 class PropriedadeController {
-  final List<Propriedade> data = [
+  List<Propriedade> data = [
     Propriedade(
       nome: "Fazenda do João",
       cidade: "São Paulo",

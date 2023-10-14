@@ -1,4 +1,5 @@
 import 'package:abc_monitor/app/pages/noticias/leitura_noticia_page.dart';
+import 'package:abc_monitor/app/pages/propriedade/propriedade_page.dart';
 import 'package:abc_monitor/theme.dart';
 import 'package:abc_monitor/widgets/bottom_bar.dart';
 import 'package:flutter/material.dart';
@@ -35,6 +36,18 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       bottomNavigationBar: const BottomBar(
         page: BottomBarPage.home,
+      ),
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.green,
+        onPressed: () {
+          Navigator.push(context, MaterialPageRoute(builder: (context) {
+            return PropriedadePage();
+          }));
+        },
+        child: Icon(
+          Icons.house,
+          color: Colors.white,
+        ),
       ),
       appBar: AppBar(
         forceMaterialTransparency: true,
