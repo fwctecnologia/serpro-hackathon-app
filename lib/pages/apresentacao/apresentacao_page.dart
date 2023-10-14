@@ -1,3 +1,5 @@
+import 'package:abc_monitor/navigation.dart';
+import 'package:abc_monitor/pages/trilha/trilha_page.dart';
 import 'package:flutter/material.dart';
 
 import '../../constants.dart';
@@ -46,7 +48,9 @@ class _ApresentacaoPageState extends State<ApresentacaoPage> {
                     SizedBox(
                       width: double.infinity,
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          CustomNavigation.push(const TrilhaPage());
+                        },
                         child: const Text("Conheça o ABC+"),
                       ),
                     ),

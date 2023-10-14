@@ -42,7 +42,7 @@ class _LoginPageState extends State<LoginPage> {
                         width: 2,
                       ),
                     ),
-                    onPressed: () => lController.goToApresentacaoPage(),
+                    onPressed: () => lController.goToHomePage(),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [

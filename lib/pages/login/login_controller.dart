@@ -1,4 +1,4 @@
-import 'package:abc_monitor/pages/apresentacao/apresentacao_page.dart';
+import 'package:abc_monitor/pages/home/home_page.dart';
 
 import '../../model/user.dart';
 import '../../navigation.dart';
@@ -9,7 +9,7 @@ class LoginController {
     user = User.empty();
   }
 
-  void goToApresentacaoPage() {
-    CustomNavigation.push(const ApresentacaoPage());
+  void goToHomePage() {
+    CustomNavigation.push(const HomePage());
   }
 }
