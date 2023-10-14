@@ -18,8 +18,13 @@ class Painel extends StatelessWidget {
             .copyWith(surface: Colors.white, surfaceTint: Colors.white),
         cardColor: Colors.white,
       ),
-      home: const LoginPage(),
+      // home: const LoginPage(),
       debugShowCheckedModeBanner: false,
+      routes: <String, WidgetBuilder>{
+        '/': (BuildContext context) => LoginPage(),
+        '/mapa': (BuildContext context) => HomePage(),
+      },
+      initialRoute: "/",
     );
   }
 }
