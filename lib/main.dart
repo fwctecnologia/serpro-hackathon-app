@@ -1,4 +1,6 @@
 import 'package:abc_monitor/pages/splash/splash_page.dart';
+import 'package:abc_monitor/web/painel.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -11,6 +13,11 @@ void main() {
     statusBarBrightness: Brightness.light,
     statusBarIconBrightness: Brightness.dark,
   ));
+
+  if (kIsWeb) {
+    return runApp(const Painel());
+  }
+
   runApp(const MyApp());
 }
 
