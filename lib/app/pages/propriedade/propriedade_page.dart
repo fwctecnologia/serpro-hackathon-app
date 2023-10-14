@@ -77,7 +77,9 @@ class _PropriedadePageState extends State<PropriedadePage> {
                       ...propriedades
                           .map(
                             (e) => CardPropriedadeWidget(
-                              function: () {},
+                              function: () {
+                                //     controller.goToPropriedadeDetalhesPage(e);
+                              },
                               p: e,
                               color: getColor(e.porcentagemAreaVerde),
                             ),

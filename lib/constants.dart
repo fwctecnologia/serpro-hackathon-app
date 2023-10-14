@@ -12,6 +12,7 @@ class Constants {
   static const String arrowWhiteAsset = 'assets/arrow-white.png';
   static const String sininhoAsset = 'assets/sininho.png';
   static const String personAsset = 'assets/person.png';
+  static const String carboninhoAsset = 'assets/carboninho.png';
 
   static List<Color> coresIndicadoras = [
     AppTheme.kDefaultColor,

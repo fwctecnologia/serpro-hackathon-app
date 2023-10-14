@@ -2,6 +2,8 @@ import 'package:abc_monitor/app/pages/noticias/noticias_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_carousel_widget/flutter_carousel_widget.dart';
 
+import '../../../widgets/bottom_bar.dart';
+
 class NoticiasPage extends StatefulWidget {
   const NoticiasPage({Key? key}) : super(key: key);
 
@@ -29,6 +31,10 @@ class _NoticiasPageState extends State<NoticiasPage> {
         title: const Text('Notícias'),
         centerTitle: true,
         forceMaterialTransparency: true,
+        automaticallyImplyLeading: false,
+      ),
+      bottomNavigationBar: const BottomBar(
+        page: BottomBarPage.noticias,
       ),
       body: Center(
         child: data.isEmpty
@@ -115,14 +121,6 @@ class _NoticiasPageState extends State<NoticiasPage> {
                                               ),
                                         ),
                                       ),
-                                      Positioned(
-                                        right: 8,
-                                        bottom: 4,
-                                        child: Padding(
-                                          padding: const EdgeInsets.all(8.0),
-                                          child: Text(data[data.indexOf(i)][2]),
-                                        ),
-                                      )
                                     ],
                                   ),
                                 ),

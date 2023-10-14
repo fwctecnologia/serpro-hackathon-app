@@ -1,4 +1,4 @@
-import 'package:abc_monitor/app/pages/propriedade/propriedade_page.dart';
+import 'package:abc_monitor/app/pages/home/home_page.dart';
 
 import '../../../model/user.dart';
 import '../../../navigation.dart';
@@ -9,7 +9,8 @@ class LoginController {
     user = User.empty();
   }
 
-  void goToHomePage() {
-    CustomNavigation.push(const PropriedadePage());
+  Future<dynamic> goToHomePage() async {
+    await Future.delayed(const Duration(seconds: 1));
+    CustomNavigation.push(const HomePage());
   }
 }

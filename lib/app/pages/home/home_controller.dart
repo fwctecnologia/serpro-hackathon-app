@@ -1,8 +1,7 @@
-import 'package:abc_monitor/pages/documentos/documentos_page.dart';
-import 'package:abc_monitor/pages/noticias/noticias_page.dart';
-import 'package:abc_monitor/pages/pastagem/pastagem_page.dart';
-
-import '../../navigation.dart';
+import '../documentos/documentos_page.dart';
+import '../noticias/noticias_page.dart';
+import '../../../navigation.dart';
+import '../pastagem/pastagem_page.dart';
 
 class HomeController {
   void goToNoticiasPage() {

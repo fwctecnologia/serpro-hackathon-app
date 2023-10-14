@@ -1,6 +1,7 @@
 import 'package:abc_monitor/theme.dart';
 import 'package:flutter/material.dart';
 
+import '../../../widgets/bottom_bar.dart';
 import 'documentos_controller.dart';
 
 class DocumentosPage extends StatefulWidget {
@@ -27,6 +28,10 @@ class _DocumentosPageState extends State<DocumentosPage> {
         title: const Text('Documentos'),
         centerTitle: true,
         forceMaterialTransparency: true,
+        automaticallyImplyLeading: false,
+      ),
+      bottomNavigationBar: const BottomBar(
+        page: BottomBarPage.documentos,
       ),
       body: docs.isEmpty
           ? const Center(
@@ -34,12 +39,12 @@ class _DocumentosPageState extends State<DocumentosPage> {
             )
           : Column(
               children: [
-                Text(
+                const Text(
                   "Confira abaixo os documentos disponíveis para download.",
                 ),
                 Container(height: 10),
                 Padding(
-                  padding: EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(8.0),
                   child: GridView.builder(
                     shrinkWrap: true,
                     itemCount: 10,

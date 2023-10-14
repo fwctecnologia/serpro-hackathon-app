@@ -32,7 +32,7 @@ class _ApresentacaoPageState extends State<ApresentacaoPage> {
                   textAlign: TextAlign.center,
                   style: Theme.of(context).textTheme.headlineLarge),
               SizedBox(
-                width: MediaQuery.of(context).size.width * 0.7,
+                width: MediaQuery.of(context).size.width * 0.8,
                 child: Column(
                   children: [
                     Container(height: 30),

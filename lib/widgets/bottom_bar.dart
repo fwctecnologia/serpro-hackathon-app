@@ -1,4 +1,7 @@
-import 'package:abc_monitor/pages/cadastrar_propriedade/cadastrar_propriedade_screen.dart';
+import 'package:abc_monitor/app/pages/documentos/documentos_page.dart';
+import 'package:abc_monitor/app/pages/home/home_page.dart';
+import 'package:abc_monitor/app/pages/noticias/noticias_page.dart';
+import 'package:abc_monitor/app/pages/pastagem/pastagem_page.dart';
 import 'package:flutter/material.dart';
 
 enum BottomBarPage { home, noticias, pastagem, documentos }
@@ -29,7 +32,7 @@ class BottomBar extends StatelessWidget {
             onTap: () {
               Navigator.of(context).pushReplacement(
                 MaterialPageRoute(
-                  builder: (context) => const CadastrarPropriedadeScreen(),
+                  builder: (context) => const HomePage(),
                 ),
               );
             },
@@ -47,21 +50,21 @@ class BottomBar extends StatelessWidget {
             onTap: () {
               Navigator.of(context).pushReplacement(
                 MaterialPageRoute(
-                  builder: (context) => const CadastrarPropriedadeScreen(),
+                  builder: (context) => const NoticiasPage(),
                 ),
               );
             },
             child: CircleAvatar(
               backgroundColor: page == BottomBarPage.noticias
                   ? const Color(0xFF509f7e)
-                  : Color(0xFFd0e8dd),
+                  : const Color(0xFFd0e8dd),
               radius: 45,
               child: Image.asset(
                 "assets/jornal.png",
                 scale: 1.1,
                 color: page != BottomBarPage.noticias
                     ? Colors.black
-                    : Color(0xFFd0e8dd),
+                    : const Color(0xFFd0e8dd),
               ),
             ),
           ),
@@ -69,21 +72,21 @@ class BottomBar extends StatelessWidget {
             onTap: () {
               Navigator.of(context).pushReplacement(
                 MaterialPageRoute(
-                  builder: (context) => const CadastrarPropriedadeScreen(),
+                  builder: (context) => const PastagemPage(),
                 ),
               );
             },
             child: CircleAvatar(
               backgroundColor: page == BottomBarPage.pastagem
                   ? const Color(0xFF509f7e)
-                  : Color(0xFFd0e8dd),
+                  : const Color(0xFFd0e8dd),
               radius: 45,
               child: Image.asset(
                 "assets/mapa.png",
                 scale: 1.1,
                 color: page != BottomBarPage.pastagem
                     ? Colors.black
-                    : Color(0xFFd0e8dd),
+                    : const Color(0xFFd0e8dd),
               ),
             ),
           ),
@@ -91,21 +94,21 @@ class BottomBar extends StatelessWidget {
             onTap: () {
               Navigator.of(context).pushReplacement(
                 MaterialPageRoute(
-                  builder: (context) => const CadastrarPropriedadeScreen(),
+                  builder: (context) => const DocumentosPage(),
                 ),
               );
             },
             child: CircleAvatar(
               backgroundColor: page == BottomBarPage.documentos
                   ? const Color(0xFF509f7e)
-                  : Color(0xFFd0e8dd),
+                  : const Color(0xFFd0e8dd),
               radius: 45,
               child: Image.asset(
                 "assets/checklist.png",
                 scale: 1.1,
                 color: page != BottomBarPage.documentos
                     ? Colors.black
-                    : Color(0xFFd0e8dd),
+                    : const Color(0xFFd0e8dd),
               ),
             ),
           ),

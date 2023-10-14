@@ -2,6 +2,7 @@ import 'package:abc_monitor/app/pages/noticias/noticias_page.dart';
 import 'package:abc_monitor/model/propriedade.dart';
 
 import '../../../navigation.dart';
+import '../cadastrar_propriedade/cadastrar_propriedade_screen.dart';
 import '../documentos/documentos_page.dart';
 
 class PropriedadeController {
@@ -55,5 +56,9 @@ class PropriedadeController {
 
   void goToDocumentosPage() {
     CustomNavigation.push(const DocumentosPage());
+  }
+
+  void goToCadastroPropriedadePage() {
+    CustomNavigation.push(const CadastrarPropriedadePage());
   }
 }

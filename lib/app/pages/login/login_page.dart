@@ -13,6 +13,7 @@ class LoginPage extends StatefulWidget {
 
 class _LoginPageState extends State<LoginPage> {
   final lController = LoginController();
+  bool loading = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,25 +43,35 @@ class _LoginPageState extends State<LoginPage> {
                         width: 2,
                       ),
                     ),
-                    onPressed: () => lController.goToHomePage(),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          'Entrar com',
-                          style: Theme.of(context)
-                              .textTheme
-                              .headlineMedium!
-                              .copyWith(
-                                  fontWeight: FontWeight.bold, fontSize: 18),
-                        ),
-                        Container(width: 5),
-                        Image.asset(
-                          Constants.logotipoGovBrAsset,
-                          scale: 23.7,
-                        ),
-                      ],
-                    ),
+                    onPressed: () {
+                      loading = true;
+                      setState(() {});
+                      lController.goToHomePage().then((value) {
+                        loading = false;
+                        setState(() {});
+                      });
+                    },
+                    child: loading
+                        ? const CircularProgressIndicator()
+                        : Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                'Entrar com',
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .headlineMedium!
+                                    .copyWith(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 18),
+                              ),
+                              Container(width: 5),
+                              Image.asset(
+                                Constants.logotipoGovBrAsset,
+                                scale: 23.7,
+                              ),
+                            ],
+                          ),
                   ),
                 ),
               ),

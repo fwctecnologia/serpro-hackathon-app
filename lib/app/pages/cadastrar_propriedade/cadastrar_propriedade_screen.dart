@@ -3,16 +3,15 @@ import 'package:flutter_map/flutter_map.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:latlong2/latlong.dart';
 
-class CadastrarPropriedadeScreen extends StatefulWidget {
-  const CadastrarPropriedadeScreen({super.key});
+class CadastrarPropriedadePage extends StatefulWidget {
+  const CadastrarPropriedadePage({super.key});
 
   @override
-  State<CadastrarPropriedadeScreen> createState() =>
-      _CadastrarPropriedadeScreenState();
+  State<CadastrarPropriedadePage> createState() =>
+      _CadastrarPropriedadePageState();
 }
 
-class _CadastrarPropriedadeScreenState
-    extends State<CadastrarPropriedadeScreen> {
+class _CadastrarPropriedadePageState extends State<CadastrarPropriedadePage> {
   final pageController = PageController();
 
   @override
