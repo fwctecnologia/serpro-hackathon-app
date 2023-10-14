@@ -1,4 +1,4 @@
-import 'package:abc_monitor/app/pages/documentos/documentos_page.dart';
+import 'package:abc_monitor/app/pages/documentos/documentos_informativos_page.dart';
 import 'package:abc_monitor/app/pages/home/home_page.dart';
 import 'package:abc_monitor/app/pages/noticias/noticias_page.dart';
 import 'package:abc_monitor/app/pages/pastagem/pastagem_page.dart';
@@ -37,12 +37,16 @@ class BottomBar extends StatelessWidget {
               );
             },
             child: CircleAvatar(
-              backgroundColor:
-                  page == BottomBarPage.home ? const Color(0xFF509f7e) : null,
+              backgroundColor: page == BottomBarPage.home
+                  ? const Color(0xFF509f7e)
+                  : const Color(0xFFd0e8dd),
               radius: 50,
               child: Image.asset(
                 "assets/home.png",
                 scale: 1,
+                color: page != BottomBarPage.noticias
+                    ? Colors.black
+                    : const Color(0xff232d29),
               ),
             ),
           ),
@@ -94,7 +98,7 @@ class BottomBar extends StatelessWidget {
             onTap: () {
               Navigator.of(context).pushReplacement(
                 MaterialPageRoute(
-                  builder: (context) => const DocumentosPage(),
+                  builder: (context) => const DocumentosInformativosPage(),
                 ),
               );
             },

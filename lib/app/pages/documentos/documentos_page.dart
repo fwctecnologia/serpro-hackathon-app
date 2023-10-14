@@ -28,7 +28,6 @@ class _DocumentosPageState extends State<DocumentosPage> {
         title: const Text('Documentos'),
         centerTitle: true,
         forceMaterialTransparency: true,
-        automaticallyImplyLeading: false,
       ),
       bottomNavigationBar: const BottomBar(
         page: BottomBarPage.documentos,

@@ -5,6 +5,7 @@ import 'package:flutter_carousel_widget/flutter_carousel_widget.dart';
 
 import '../../../constants.dart';
 import '../noticias/noticias_controller.dart';
+import '../perfil/perfil_page.dart';
 import 'home_controller.dart';
 
 class HomePage extends StatefulWidget {
@@ -39,7 +40,12 @@ class _HomePageState extends State<HomePage> {
         automaticallyImplyLeading: false,
         centerTitle: true,
         title: const Text("Acompanhamento de cO2"),
-        leading: Image.asset(Constants.personAsset),
+        leading: InkWell(
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const PerfilPage()));
+            },
+            child: Image.asset(Constants.personAsset)),
         actions: [
           InkWell(
             onTap: () => controller.goToPastagemPage(),
