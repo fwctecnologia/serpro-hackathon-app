@@ -195,7 +195,7 @@ class _PerfilPageState extends State<PerfilPage> {
                       child: Container(
                         height: 12,
                         decoration: BoxDecoration(
-                          color: AppTheme.kDefaultColor,
+                          color: const Color(0xffF9AB6F),
                           borderRadius: BorderRadius.circular(10),
                         ),
                       ),
@@ -256,7 +256,9 @@ class _PerfilPageState extends State<PerfilPage> {
                     child: Container(
                       height: 8,
                       decoration: BoxDecoration(
-                        color: AppTheme.kDefaultColor,
+                        color: finalizado
+                            ? AppTheme.kDefaultColor
+                            : Color(0xffF9AB6F),
                         borderRadius: BorderRadius.circular(10),
                       ),
                     ),

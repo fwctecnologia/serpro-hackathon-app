@@ -42,12 +42,8 @@ class _PropriedadePageState extends State<PropriedadePage> {
     return Scaffold(
       appBar: AppBar(
         forceMaterialTransparency: true,
-        automaticallyImplyLeading: false,
         centerTitle: true,
         title: const Text('Minhas Propriedades'),
-        leading: Image.asset(
-          Constants.personAsset,
-        ),
         actions: [
           InkWell(
             onTap: () => controller.goToNoticiasPage(),
@@ -56,7 +52,7 @@ class _PropriedadePageState extends State<PropriedadePage> {
         ],
       ),
       bottomSheet: Container(
-        margin: const EdgeInsets.all(16),
+        margin: const EdgeInsets.all(8),
         width: MediaQuery.of(context).size.width,
         child: ElevatedButton(
           style: ElevatedButton.styleFrom(

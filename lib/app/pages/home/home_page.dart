@@ -2,12 +2,12 @@ import 'package:abc_monitor/app/pages/noticias/leitura_noticia_page.dart';
 import 'package:abc_monitor/app/pages/propriedade/propriedade_page.dart';
 import 'package:abc_monitor/theme.dart';
 import 'package:abc_monitor/widgets/bottom_bar.dart';
+import 'package:abc_monitor/widgets/drawer_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_carousel_widget/flutter_carousel_widget.dart';
 
 import '../../../constants.dart';
 import '../noticias/noticias_controller.dart';
-import '../perfil/perfil_page.dart';
 import 'home_controller.dart';
 
 class HomePage extends StatefulWidget {
@@ -18,6 +18,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  final GlobalKey<ScaffoldState> _key = GlobalKey();
   List<dynamic> data = [];
   final controller = HomeController();
   final noticiasController = NoticiasController();
@@ -34,9 +35,11 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: _key,
       bottomNavigationBar: const BottomBar(
         page: BottomBarPage.home,
       ),
+      drawer: const AppDrawerWidget(),
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.green,
         onPressed: () {
@@ -56,8 +59,9 @@ class _HomePageState extends State<HomePage> {
         title: const Text("Acompanhamento de cO2"),
         leading: InkWell(
             onTap: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const PerfilPage()));
+              _key.currentState!.openDrawer();
+              // Navigator.push(context,
+              //     MaterialPageRoute(builder: (context) => const PerfilPage()));
             },
             child: Image.asset(Constants.personAsset)),
         actions: [

@@ -19,14 +19,14 @@ class _CardPropriedadeWidgetState extends State<CardPropriedadeWidget> {
     return GestureDetector(
       onTap: () => widget.function(),
       child: Container(
-        margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+        margin: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
         padding: const EdgeInsets.all(8.0),
         decoration: BoxDecoration(
           color: widget.color,
           borderRadius: BorderRadius.circular(10),
         ),
         child: Padding(
-          padding: const EdgeInsets.all(16.0),
+          padding: const EdgeInsets.all(8.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
