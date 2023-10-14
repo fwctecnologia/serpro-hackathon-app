@@ -1,4 +1,4 @@
-import 'package:abc_monitor/app/pages/home/home_page.dart';
+import 'package:abc_monitor/app/pages/propriedade/propriedade_page.dart';
 
 import '../../../model/user.dart';
 import '../../../navigation.dart';
@@ -10,6 +10,6 @@ class LoginController {
   }
 
   void goToHomePage() {
-    CustomNavigation.push(const HomePage());
+    CustomNavigation.push(const PropriedadePage());
   }
 }

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class AppTheme {
-  static const Color kDefaultColor = Color(0xFF509F7E);
+  static const Color kDefaultColor = Color(0xFF73B89B);
   static const Color kScaffoldColor = Color(0xFFE8F3EE);
   static const Color kLightGreen = Color(0xff63726B);
   static const Color kDarkGreen = Color(0xFF20342B);
@@ -14,9 +14,17 @@ class AppTheme {
           elevation: 0,
           iconTheme: const IconThemeData(color: Colors.black),
           titleTextStyle: GoogleFonts.roboto(
-            fontSize: 16,
+            fontSize: 18,
             fontWeight: FontWeight.w500,
             color: AppTheme.kBlack,
+          ),
+        ),
+        bottomSheetTheme: const BottomSheetThemeData(
+          backgroundColor: Color(0xFFE8F3EE),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.vertical(
+              top: Radius.circular(16),
+            ),
           ),
         ),
         disabledColor: Colors.black,
