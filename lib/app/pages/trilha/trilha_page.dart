@@ -147,8 +147,8 @@ class _TrilhaPageState extends State<TrilhaPage> {
                     return;
                   }
 
-                  int nine = nineChecked == 2 ? 1 : 0;
-                  int ten = tenChecked == 1 ? 1 : 0;
+                  int nine = nineChecked == 2 ? 2 : 0;
+                  int ten = tenChecked == 1 ? 2 : 0;
                   int eleven = elevenChecked == 3 ? 1 : 0;
                   totalAcertos = nine + ten + eleven;
                   pageController.nextPage(
@@ -269,15 +269,15 @@ class StepTwo extends StatelessWidget {
           child: Column(
             children: [
               Container(height: MediaQuery.of(context).size.height * 0.05),
-              Image.asset("assets/acoes.png"),
-              Container(height: 20),
+              // Image.asset("assets/acoes.png"),
+              // Container(height: 20),
               Text(
-                "Ações - Se Tornando Sócio de Empresas",
+                "Sustentabilidade",
                 style: GoogleFonts.robotoCondensed(
                   fontWeight: FontWeight.w700,
                   fontSize: 24,
                   letterSpacing: -1,
-                  color: Colors.white,
+                  color: Colors.black,
                 ),
               ),
               Container(height: 20),
@@ -286,46 +286,14 @@ class StepTwo extends StatelessWidget {
                 child: RichText(
                   textAlign: TextAlign.center,
                   text: TextSpan(
-                    text: 'Ao compra acoes, voce se torna',
+                    text:
+                        'O ABC+ promove práticas agrícolas que são ambientalmente sustentáveis, contribuindo para a conservação dos recursos naturais, como água e solo.',
                     style: GoogleFonts.robotoCondensed(
-                      color: Colors.white,
+                      color: Colors.black87,
                       fontWeight: FontWeight.w500,
                       fontSize: 18,
                     ),
-                    children: [
-                      TextSpan(
-                        text: ' socio de uma empresa, ',
-                        style: GoogleFonts.robotoCondensed(
-                          color: Colors.white,
-                          fontWeight: FontWeight.w700,
-                          fontSize: 18,
-                        ),
-                      ),
-                      TextSpan(
-                          text:
-                              'mesmo que em uma escala pequena, e pode beneficiar do',
-                          style: GoogleFonts.robotoCondensed(
-                            color: Colors.white,
-                            fontWeight: FontWeight.w500,
-                            fontSize: 18,
-                          )),
-                      TextSpan(
-                        text: ' desempenho ',
-                        style: GoogleFonts.robotoCondensed(
-                          color: Colors.white,
-                          fontWeight: FontWeight.w700,
-                          fontSize: 18,
-                        ),
-                      ),
-                      TextSpan(
-                        text: 'dessa empresa',
-                        style: GoogleFonts.robotoCondensed(
-                          color: Colors.white,
-                          fontWeight: FontWeight.w500,
-                          fontSize: 18,
-                        ),
-                      )
-                    ],
+                    children: [],
                   ),
                 ),
               ),
@@ -351,15 +319,13 @@ class StepThree extends StatelessWidget {
           child: Column(
             children: [
               Container(height: MediaQuery.of(context).size.height * 0.05),
-              Image.asset("assets/investing.png"),
-              Container(height: 20),
               Text(
-                "Oportunidades e Riscos",
+                "Mitigação das Mudanças Climáticas",
                 style: GoogleFonts.robotoCondensed(
                   fontWeight: FontWeight.w700,
                   fontSize: 24,
                   letterSpacing: -1,
-                  color: Colors.white,
+                  color: Colors.black,
                 ),
               ),
               Container(height: 20),
@@ -368,30 +334,14 @@ class StepThree extends StatelessWidget {
                 child: RichText(
                   textAlign: TextAlign.center,
                   text: TextSpan(
-                    text: 'Comprar acoes pode fazer seu dinheiro',
+                    text:
+                        'A agricultura ABC+ ajuda a reduzir as emissões de gases de efeito estufa, ajudando na luta contra as mudanças climáticas.',
                     style: GoogleFonts.robotoCondensed(
-                      color: Colors.white,
+                      color: Colors.black87,
                       fontWeight: FontWeight.w500,
                       fontSize: 18,
                     ),
-                    children: [
-                      TextSpan(
-                        text: ' crescer muito, ',
-                        style: GoogleFonts.robotoCondensed(
-                          color: Colors.white,
-                          fontWeight: FontWeight.w700,
-                          fontSize: 18,
-                        ),
-                      ),
-                      TextSpan(
-                          text:
-                              'mas, tambem pode diminuir. Tem que ficar de olho.',
-                          style: GoogleFonts.robotoCondensed(
-                            color: Colors.white,
-                            fontWeight: FontWeight.w500,
-                            fontSize: 18,
-                          )),
-                    ],
+                    children: [],
                   ),
                 ),
               ),
@@ -417,15 +367,13 @@ class StepFour extends StatelessWidget {
           child: Column(
             children: [
               Container(height: MediaQuery.of(context).size.height * 0.05),
-              Image.asset("assets/bolsa.png"),
-              Container(height: 20),
               Text(
-                "Como Investir na Bolsa?",
+                "Produtividade Sustentável",
                 style: GoogleFonts.robotoCondensed(
                   fontWeight: FontWeight.w700,
                   fontSize: 24,
                   letterSpacing: -1,
-                  color: Colors.white,
+                  color: Colors.black,
                 ),
               ),
               Container(height: 20),
@@ -434,30 +382,14 @@ class StepFour extends StatelessWidget {
                 child: RichText(
                   textAlign: TextAlign.center,
                   text: TextSpan(
-                    text: 'Para investir voce precisa de uma, ',
+                    text:
+                        'O ABC+ visa aumentar a produção de alimentos de forma sustentável, atendendo às necessidades atuais sem comprometer as gerações futuras.',
                     style: GoogleFonts.robotoCondensed(
-                      color: Colors.white,
+                      color: Colors.black87,
                       fontWeight: FontWeight.w500,
                       fontSize: 18,
                     ),
-                    children: [
-                      TextSpan(
-                        text: 'corretora. ',
-                        style: GoogleFonts.robotoCondensed(
-                          color: Colors.white,
-                          fontWeight: FontWeight.w700,
-                          fontSize: 18,
-                        ),
-                      ),
-                      TextSpan(
-                          text:
-                              'Alguma das mais utilizadas estao no link no final do modulo.',
-                          style: GoogleFonts.robotoCondensed(
-                            color: Colors.white,
-                            fontWeight: FontWeight.w500,
-                            fontSize: 18,
-                          )),
-                    ],
+                    children: [],
                   ),
                 ),
               ),
@@ -483,15 +415,13 @@ class StepFive extends StatelessWidget {
           child: Column(
             children: [
               Container(height: MediaQuery.of(context).size.height * 0.05),
-              Image.asset("assets/acompanhando.png"),
-              Container(height: 20),
               Text(
-                "Acompanhando seus Investimentos",
+                "Conservação de Biodiversidade:",
                 style: GoogleFonts.robotoCondensed(
                   fontWeight: FontWeight.w700,
                   fontSize: 24,
                   letterSpacing: -1,
-                  color: Colors.white,
+                  color: Colors.black,
                 ),
               ),
               Container(height: 20),
@@ -500,39 +430,14 @@ class StepFive extends StatelessWidget {
                 child: RichText(
                   textAlign: TextAlign.center,
                   text: TextSpan(
-                    text: 'E importante',
+                    text:
+                        'Práticas como o plantio direto e a rotação de culturas promovem a biodiversidade agrícola, beneficiando a fauna e a flora locais.',
                     style: GoogleFonts.robotoCondensed(
-                      color: Colors.white,
+                      color: Colors.black87,
                       fontWeight: FontWeight.w500,
                       fontSize: 18,
                     ),
-                    children: [
-                      TextSpan(
-                        text: ' checar constantemente ',
-                        style: GoogleFonts.robotoCondensed(
-                          color: Colors.white,
-                          fontWeight: FontWeight.w700,
-                          fontSize: 18,
-                        ),
-                      ),
-                      TextSpan(
-                          text:
-                              'como suas acoes estao indo e estudar estrategias, para aumentar suas chances de ter '
-                              'lucro e ',
-                          style: GoogleFonts.robotoCondensed(
-                            color: Colors.white,
-                            fontWeight: FontWeight.w500,
-                            fontSize: 18,
-                          )),
-                      TextSpan(
-                        text: 'diminuir riscos.',
-                        style: GoogleFonts.robotoCondensed(
-                          color: Colors.white,
-                          fontWeight: FontWeight.w700,
-                          fontSize: 18,
-                        ),
-                      ),
-                    ],
+                    children: [],
                   ),
                 ),
               ),
@@ -558,15 +463,13 @@ class StepSix extends StatelessWidget {
           child: Column(
             children: [
               Container(height: MediaQuery.of(context).size.height * 0.05),
-              Image.asset("assets/receita.png"),
-              Container(height: 20),
               Text(
-                "Dividendos",
+                "Redução da Erosão do Solo",
                 style: GoogleFonts.robotoCondensed(
                   fontWeight: FontWeight.w700,
                   fontSize: 24,
                   letterSpacing: -1,
-                  color: Colors.white,
+                  color: Colors.black,
                 ),
               ),
               Container(height: 20),
@@ -576,37 +479,13 @@ class StepSix extends StatelessWidget {
                   textAlign: TextAlign.center,
                   text: TextSpan(
                     text:
-                        'Algumas empresas pagam uma parte do seu lucro aos acionistas, isso se chama ',
+                        'A cobertura permanente do solo ajuda a reduzir a erosão, o que é crucial para manter a fertilidade do solo.',
                     style: GoogleFonts.robotoCondensed(
-                      color: Colors.white,
+                      color: Colors.black87,
                       fontWeight: FontWeight.w500,
                       fontSize: 18,
                     ),
-                    children: [
-                      TextSpan(
-                        text: '“Pagamento de Dividendos” ',
-                        style: GoogleFonts.robotoCondensed(
-                          color: Colors.white,
-                          fontWeight: FontWeight.w700,
-                          fontSize: 18,
-                        ),
-                      ),
-                      TextSpan(
-                          text: ' e te permite ganhar dinheiro ',
-                          style: GoogleFonts.robotoCondensed(
-                            color: Colors.white,
-                            fontWeight: FontWeight.w500,
-                            fontSize: 18,
-                          )),
-                      TextSpan(
-                        text: 'sem vender suas ações. .',
-                        style: GoogleFonts.robotoCondensed(
-                          color: Colors.white,
-                          fontWeight: FontWeight.w700,
-                          fontSize: 18,
-                        ),
-                      ),
-                    ],
+                    children: [],
                   ),
                 ),
               ),
@@ -632,18 +511,13 @@ class StepSeven extends StatelessWidget {
           child: Column(
             children: [
               Container(height: MediaQuery.of(context).size.height * 0.05),
-              Image.asset(
-                "assets/moon.png",
-                width: MediaQuery.of(context).size.width * 0.8,
-              ),
-              Container(height: 20),
               Text(
-                "O que Influencia o Mercado de Ações?",
+                "Resiliência Climática",
                 style: GoogleFonts.robotoCondensed(
                   fontWeight: FontWeight.w700,
-                  fontSize: 22,
+                  fontSize: 24,
                   letterSpacing: -1,
-                  color: Colors.white,
+                  color: Colors.black,
                 ),
               ),
               Container(height: 20),
@@ -652,38 +526,14 @@ class StepSeven extends StatelessWidget {
                 child: RichText(
                   textAlign: TextAlign.center,
                   text: TextSpan(
-                    text: 'Muitas coisas podem fazer as ações ',
+                    text:
+                        'O ABC+ ajuda os agricultores a lidar com eventos climáticos extremos, tornando seus sistemas agrícolas mais resilientes',
                     style: GoogleFonts.robotoCondensed(
-                      color: Colors.white,
-                      fontWeight: FontWeight.w700,
+                      color: Colors.black87,
+                      fontWeight: FontWeight.w500,
                       fontSize: 18,
                     ),
-                    children: [
-                      TextSpan(
-                        text: 'subirem ou cairem, ',
-                        style: GoogleFonts.robotoCondensed(
-                          color: Colors.white,
-                          fontWeight: FontWeight.w700,
-                          fontSize: 18,
-                        ),
-                      ),
-                      TextSpan(
-                        text:
-                            'como notícias sobre política ou o que acontece no mundo.\n',
-                        style: GoogleFonts.robotoCondensed(
-                          color: Colors.white,
-                          fontWeight: FontWeight.w500,
-                          fontSize: 18,
-                        ),
-                      ),
-                      TextSpan(
-                          text: ' se mantenha atualizado!',
-                          style: GoogleFonts.robotoCondensed(
-                            color: Colors.white,
-                            fontWeight: FontWeight.w500,
-                            fontSize: 18,
-                          )),
-                    ],
+                    children: [],
                   ),
                 ),
               ),
@@ -709,15 +559,13 @@ class StepEight extends StatelessWidget {
           child: Column(
             children: [
               Container(height: MediaQuery.of(context).size.height * 0.05),
-              Image.asset("assets/indice.png"),
-              Container(height: 20),
               Text(
-                "Índices do Mercado de Ações",
+                "Adoção Global",
                 style: GoogleFonts.robotoCondensed(
                   fontWeight: FontWeight.w700,
                   fontSize: 24,
                   letterSpacing: -1,
-                  color: Colors.white,
+                  color: Colors.black,
                 ),
               ),
               Container(height: 20),
@@ -727,30 +575,13 @@ class StepEight extends StatelessWidget {
                   textAlign: TextAlign.center,
                   text: TextSpan(
                     text:
-                        'Os índices ajudam a entender se as ações  estão indo bem ou mal. Eles são como um',
+                        'O conceito de ABC+ está se espalhando globalmente, com vários países adotando essas práticas para melhorar a sustentabilidade e a produtividade da agricultura.',
                     style: GoogleFonts.robotoCondensed(
-                      color: Colors.white,
+                      color: Colors.black87,
                       fontWeight: FontWeight.w500,
                       fontSize: 18,
                     ),
-                    children: [
-                      TextSpan(
-                        text: ' resumo ',
-                        style: GoogleFonts.robotoCondensed(
-                          color: Colors.white,
-                          fontWeight: FontWeight.w700,
-                          fontSize: 18,
-                        ),
-                      ),
-                      TextSpan(
-                          text:
-                              'do que está acontecendo! \n\nVeja os links no final para mais informações',
-                          style: GoogleFonts.robotoCondensed(
-                            color: Colors.white,
-                            fontWeight: FontWeight.w500,
-                            fontSize: 18,
-                          )),
-                    ],
+                    children: [],
                   ),
                 ),
               ),
@@ -781,7 +612,7 @@ class StepNine extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              "O que é a Bolsa de Valores?",
+              "O que é o ABC+?",
               style: GoogleFonts.robotoCondensed(
                 fontSize: 28,
                 fontWeight: FontWeight.w700,
@@ -791,25 +622,25 @@ class StepNine extends StatelessWidget {
             ),
             SizedBox(height: 20),
             CheckBoxOption(
-              title: "Um lugar para comprar e vender imóveis",
+              title: "Um lugar para comprar e vender produtos agropecuários",
               onTap: onTap,
               number: 0,
               checkedNumber: checkedNumber,
             ),
             CheckBoxOption(
-              title: "Um banco que empresa dinheiro para estudantes e jovens",
+              title: "Um agrotóxico que ajuda a combater pragas",
               onTap: onTap,
               number: 1,
               checkedNumber: checkedNumber,
             ),
             CheckBoxOption(
-              title: "Um mercado onde se negociam partes de empresas (ações)",
+              title: "Práticas agrícolas que são ambientalmente sustentáveis",
               onTap: onTap,
               number: 2,
               checkedNumber: checkedNumber,
             ),
             CheckBoxOption(
-              title: "Um tipo de bolsa para colocar dinheiro",
+              title: "Um fertilizante que ajuda a aumentar a produtividade",
               onTap: onTap,
               number: 3,
               checkedNumber: checkedNumber,
@@ -846,7 +677,7 @@ class StepTen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              "O que são “Dividendos” ?",
+              "Como o ABC+ contribui para a mitigação das mudanças climáticas?",
               style: GoogleFonts.robotoCondensed(
                 fontSize: 28,
                 fontWeight: FontWeight.w700,
@@ -856,35 +687,32 @@ class StepTen extends StatelessWidget {
             ),
             SizedBox(height: 20),
             CheckBoxOption(
-              title:
-                  "É o valor que os investidores pagam para comprar ações na bolsa",
+              title: "Aumentando o uso de combustíveis fósseis",
               onTap: onTap,
               number: 0,
               checkedNumber: checkedNumber,
             ),
             CheckBoxOption(
-              title:
-                  "É uma parte do lucro de uma empresa que ela divide com seus investidores",
+              title: "Promovendo práticas agrícolas intensivas em água",
               onTap: onTap,
               number: 1,
               checkedNumber: checkedNumber,
             ),
             CheckBoxOption(
-              title: "É o valor que os investidores recebem ao vender uma ação",
+              title:
+                  "Diminuindo as emissões de gases de efeito estufa na agricultura",
               onTap: onTap,
               number: 2,
               checkedNumber: checkedNumber,
             ),
             CheckBoxOption(
-              title:
-                  "É o valor que se paga para a corretora por intermediar a venda das ações",
+              title: "Reduzindo a biodiversidade",
               onTap: onTap,
               number: 3,
               checkedNumber: checkedNumber,
             ),
             CheckBoxOption(
-              title:
-                  "É o valor que o investidor fica devendo ao perder dinheiro na bolsa",
+              title: "Incentivando o desmatamento",
               onTap: onTap,
               number: 4,
               checkedNumber: checkedNumber,
@@ -915,7 +743,7 @@ class StepEleven extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              "Complete a frase: Investir na bolsa....",
+              "Complete a frase: Com o ABC+ eu tenho....",
               style: GoogleFonts.robotoCondensed(
                 fontSize: 28,
                 fontWeight: FontWeight.w700,
@@ -925,25 +753,25 @@ class StepEleven extends StatelessWidget {
             ),
             SizedBox(height: 20),
             CheckBoxOption(
-              title: "...sempre dá lucros",
+              title: "...mais produtividade",
               onTap: onTap,
               number: 0,
               checkedNumber: checkedNumber,
             ),
             CheckBoxOption(
-              title: "...é apenas para corretores de ações",
+              title: "...aumento de fertilidade do solo",
               onTap: onTap,
               number: 1,
               checkedNumber: checkedNumber,
             ),
             CheckBoxOption(
-              title: "...não é lucrativo",
+              title: "...o controle de pragas",
               onTap: onTap,
               number: 2,
               checkedNumber: checkedNumber,
             ),
             CheckBoxOption(
-              title: "...pode trazer lucros ou prejuízo",
+              title: "...um aumento a sustentabilidade",
               onTap: onTap,
               number: 3,
               checkedNumber: checkedNumber,
@@ -984,9 +812,9 @@ class FinishStep extends StatelessWidget {
               style: GoogleFonts.robotoCondensed(
                   fontSize: 32,
                   fontWeight: FontWeight.w700,
-                  color: Colors.blue),
+                  color: Colors.green),
             ),
-            Image.asset("assets/result.png"),
+            // Image.asset("assets/result.png"),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -995,7 +823,7 @@ class FinishStep extends StatelessWidget {
                   style: GoogleFonts.robotoCondensed(
                       fontSize: 64,
                       fontWeight: FontWeight.w700,
-                      color: Colors.blue),
+                      color: Colors.green),
                 ),
                 Text(
                   " / 3",
@@ -1015,23 +843,14 @@ class FinishStep extends StatelessWidget {
               height: 50,
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Color(0xFF55A0D6),
+                  backgroundColor: Colors.green,
                   foregroundColor: Colors.white,
                 ),
                 onPressed: () async {
-                  // await Get.to(() => NovaGraninhaScreen());
-                  // Get.showSnackbar(
-                  //   const GetSnackBar(
-                  //     message: 'Fim da trilha :)',
-                  //     duration: Duration(seconds: 2),
-                  //     backgroundColor: Colors.green,
-                  //   ),
-                  // );
-                  // await Get.to(() => HomeScreen());
-                  //
+                  Navigator.of(context).pop();
                 },
                 child: Text(
-                  'Resgatar Premio',
+                  'Usar o Aplicativo',
                   style: GoogleFonts.robotoCondensed(
                     fontWeight: FontWeight.w700,
                     fontSize: 18,
@@ -1078,8 +897,8 @@ class _CheckBoxOptionState extends State<CheckBoxOption> {
           borderRadius: BorderRadius.circular(12),
           border: Border.all(
             color: widget.checkedNumber == widget.number
-                ? Colors.white
-                : const Color(0xffbebebe),
+                ? Colors.black
+                : Color.fromARGB(255, 106, 106, 106),
           ),
           color: widget.checkedNumber == widget.number
               ? Colors.white12
@@ -1102,8 +921,8 @@ class _CheckBoxOptionState extends State<CheckBoxOption> {
                     fontSize: 18,
                     fontWeight: FontWeight.w700,
                     color: widget.checkedNumber == widget.number
-                        ? Colors.white
-                        : const Color(0xffbebebe),
+                        ? Colors.black
+                        : Color.fromARGB(255, 106, 106, 106),
                   ),
                   textAlign: TextAlign.left,
                 ),

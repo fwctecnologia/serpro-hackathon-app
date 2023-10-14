@@ -1,3 +1,4 @@
+import 'package:abc_monitor/widgets/bottom_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
@@ -32,6 +33,9 @@ class _PastagemPageState extends State<PastagemPage> {
         centerTitle: true,
         forceMaterialTransparency: true,
         title: const Text("Mapa"),
+      ),
+      bottomNavigationBar: const BottomBar(
+        page: BottomBarPage.pastagem,
       ),
       body: SafeArea(child: WebViewWidget(controller: controller)),
     );
