@@ -11,7 +11,7 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'ABC Monitor',
+      title: 'Agro +',
       theme: AppTheme.light(),
       home: const SplashPage(),
       navigatorKey: CustomNavigation.navigatorKey,
