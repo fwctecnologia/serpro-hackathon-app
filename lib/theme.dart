@@ -70,29 +70,29 @@ class AppTheme {
         ),
         textTheme: TextTheme(
           bodyLarge: GoogleFonts.robotoCondensed(
-              fontSize: 16, color: kBlack, fontWeight: FontWeight.w500),
-          bodyMedium: GoogleFonts.robotoCondensed(fontSize: 12, color: kBlack),
-          bodySmall: GoogleFonts.robotoCondensed(fontSize: 10, color: kBlack),
-          displayLarge: GoogleFonts.sortsMillGoudy(fontSize: 26, color: kBlack),
+              fontSize: 18, color: kBlack, fontWeight: FontWeight.w500),
+          bodyMedium: GoogleFonts.robotoCondensed(fontSize: 14, color: kBlack),
+          bodySmall: GoogleFonts.robotoCondensed(fontSize: 12, color: kBlack),
+          displayLarge: GoogleFonts.sortsMillGoudy(fontSize: 28, color: kBlack),
           displayMedium:
-              GoogleFonts.sortsMillGoudy(fontSize: 20, color: kBlack),
+              GoogleFonts.sortsMillGoudy(fontSize: 22, color: kBlack),
           displaySmall: GoogleFonts.robotoCondensed(
-            fontSize: 16,
+            fontSize: 18,
             color: kBlack,
             fontWeight: FontWeight.w600,
           ),
           headlineLarge: GoogleFonts.robotoCondensed(
-            fontSize: 26,
+            fontSize: 28,
             color: kDarkGreen,
             fontWeight: FontWeight.bold,
           ),
           headlineMedium: GoogleFonts.robotoCondensed(
-            fontSize: 16,
+            fontSize: 18,
             color: kBlack,
             fontWeight: FontWeight.bold,
           ),
           headlineSmall: GoogleFonts.robotoCondensed(
-            fontSize: 12,
+            fontSize: 14,
             color: kBlack,
             fontWeight: FontWeight.bold,
           ),
