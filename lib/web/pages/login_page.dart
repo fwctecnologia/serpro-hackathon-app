@@ -1,6 +1,7 @@
 import 'package:abc_monitor/constants.dart';
 import 'package:abc_monitor/theme.dart';
 import 'package:abc_monitor/web/pages/destinations_page.dart';
+import 'package:abc_monitor/web/pages/home_page.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatefulWidget {
@@ -115,6 +116,16 @@ class _LoginPageState extends State<LoginPage> {
                               ),
                       ),
                       const SizedBox(height: 15),
+                      TextButton(
+                        onPressed: () {
+                          Navigator.of(context).pushReplacement(
+                            MaterialPageRoute(
+                              builder: (context) => const HomePage(),
+                            ),
+                          );
+                        },
+                        child: Text("Ver o Mapa"),
+                      )
                       // isLoading
                       //     ? const CircularProgressIndicator()
                       //     : ElevatedButton(

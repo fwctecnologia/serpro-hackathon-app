@@ -2,6 +2,7 @@ import 'package:abc_monitor/web/pages/destinations/arquivos_destination.dart';
 import 'package:abc_monitor/web/pages/destinations/noticias_destination.dart';
 import 'package:abc_monitor/web/pages/destinations/notificacoes_destination.dart';
 import 'package:abc_monitor/web/pages/destinations/usuarios_destination.dart';
+import 'package:abc_monitor/web/pages/home_page.dart';
 import 'package:abc_monitor/web/tables/noticias_table.dart';
 import 'package:flutter/material.dart';
 
@@ -142,6 +143,16 @@ class _DestinationsScreenState extends State<DestinationsScreen> {
                       //   label: const Text("Sair"),
                       // ),
                       const Expanded(child: SizedBox()),
+                      TextButton(
+                        onPressed: () {
+                          Navigator.of(context).pushReplacement(
+                            MaterialPageRoute(
+                              builder: (context) => const HomePage(),
+                            ),
+                          );
+                        },
+                        child: Text("Ver o Mapa"),
+                      ),
                       TextButton(onPressed: () {}, child: Text("SAIR"))
                       // IconButton(
                       //   onPressed: () {
