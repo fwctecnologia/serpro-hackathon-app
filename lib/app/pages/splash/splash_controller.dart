@@ -1,6 +1,5 @@
-import 'package:abc_monitor/pages/apresentacao/apresentacao_page.dart';
-
-import '../../navigation.dart';
+import '../../../navigation.dart';
+import '../apresentacao/apresentacao_page.dart';
 
 class SplashController {
   SplashController() {

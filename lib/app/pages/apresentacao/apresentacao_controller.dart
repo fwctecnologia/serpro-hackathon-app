@@ -1,5 +1,5 @@
-import 'package:abc_monitor/pages/login/login_page.dart';
-import '../../navigation.dart';
+import '../../../navigation.dart';
+import '../login/login_page.dart';
 
 class PresentationController {
   void goToLoginPage() {

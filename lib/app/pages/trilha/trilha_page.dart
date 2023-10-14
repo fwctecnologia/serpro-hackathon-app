@@ -2,7 +2,7 @@ import 'package:abc_monitor/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../../theme.dart';
+import '../../../theme.dart';
 
 class TrilhaPage extends StatefulWidget {
   const TrilhaPage({super.key});

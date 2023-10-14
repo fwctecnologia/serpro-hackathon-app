@@ -1,6 +1,5 @@
 import 'package:abc_monitor/theme.dart';
 import 'package:abc_monitor/web/pages/destinations_page.dart';
-import 'package:abc_monitor/web/pages/home_page.dart';
 import 'package:flutter/material.dart';
 
 class Painel extends StatelessWidget {

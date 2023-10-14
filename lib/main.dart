@@ -1,10 +1,9 @@
-import 'package:abc_monitor/pages/splash/splash_page.dart';
+import 'package:abc_monitor/app/app.dart';
 import 'package:abc_monitor/web/painel.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import 'navigation.dart';
 import 'theme.dart';
 
 void main() {
@@ -18,21 +17,5 @@ void main() {
     return runApp(const Painel());
   }
 
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  // This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'ABC Monitor',
-      theme: AppTheme.light(),
-      home: const SplashPage(),
-      navigatorKey: CustomNavigation.navigatorKey,
-      debugShowCheckedModeBanner: false,
-    );
-  }
+  runApp(const App());
 }

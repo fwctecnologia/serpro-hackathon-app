@@ -1,7 +1,7 @@
+import 'package:abc_monitor/app/pages/splash/splash_controller.dart';
 import 'package:flutter/material.dart';
 
-import '../../constants.dart';
-import 'splash_controller.dart';
+import '../../../constants.dart';
 
 class SplashPage extends StatefulWidget {
   const SplashPage({Key? key}) : super(key: key);

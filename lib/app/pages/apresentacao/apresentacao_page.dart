@@ -1,8 +1,8 @@
 import 'package:abc_monitor/navigation.dart';
-import 'package:abc_monitor/pages/trilha/trilha_page.dart';
+import 'package:abc_monitor/app/pages/trilha/trilha_page.dart';
 import 'package:flutter/material.dart';
 
-import '../../constants.dart';
+import '../../../constants.dart';
 import 'apresentacao_controller.dart';
 
 class ApresentacaoPage extends StatefulWidget {
