@@ -70,8 +70,7 @@ class _PropriedadePageState extends State<PropriedadePage> {
           mainAxisSize: MainAxisSize.max,
           children: [
             propriedades.isEmpty
-                ? Expanded(
-                    child: const Center(child: CircularProgressIndicator()))
+                ? const Center(child: CircularProgressIndicator())
                 : Column(
                     mainAxisSize: MainAxisSize.max,
                     children: [
